@@ -1,0 +1,32 @@
+[
+  {
+    "Mascota": {
+      "ID": "6457fdc5c2c12b903d82d673",
+      "edad": 12
+    }
+  },
+  {
+    "Mascota": {
+      "ID": "6457fdc5b017e67f1d3d5045",
+      "edad": 12
+    }
+  },
+  {
+    "Mascota": {
+      "ID": "6457fdc59c40cea85f285455",
+      "edad": 19
+    }
+  },
+  {
+    "Mascota": {
+      "ID": "6457fdc5774d5b03cd880403",
+      "edad": 13
+    }
+  },
+  {
+    "Mascota": {
+      "ID": "6457fdc53a9001d402796be7",
+      "edad": 4
+    }
+  }
+]
