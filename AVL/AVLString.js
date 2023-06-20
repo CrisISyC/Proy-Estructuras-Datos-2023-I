@@ -176,6 +176,31 @@ class AVLTree {
         return this.searchNode(node.right, nom_usuario);
       }
     }
+    searchLogin(nom_usuario, contrasena) {
+        const node = this.searchNode(this.root, nom_usuario);
+  
+        if (node !== null) {
+          if (node.nom_usuario === nom_usuario && node.contrasena === contrasena) {
+            console.log("Bienvenido");
+            return true;
+          }else{
+            console.log("Usuario o contraseña incorrecta");
+            return false;
+          }     
+        } else {
+          console.log("No se encontró el usuario:", nom_usuario);
+          return false;
+        }
+      }
+      AgregarUsuario(nom_usuario) {
+        const node = this.searchNode(this.root, nom_usuario);
+  
+        if (node !== null) {
+          return true;       
+        } else {
+          return false;
+        }
+      }
 
     // Método para eliminar un nodo del árbol
     deleteUsuario(nom_usuario) {
