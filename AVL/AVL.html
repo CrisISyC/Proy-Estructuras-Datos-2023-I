@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de conexión JS</title>
+  <script src="AVLString.js"></script>
+</head>
+<body>
+  <input type="text" id="nombre_completo" placeholder="Nombre completo"><br>
+  <input type="text" id="edad" placeholder="Edad"><br>
+  <input type="text" id="email" placeholder="Email"><br>
+  <input type="text" id="nombre_usuario" placeholder="Nombre de usuario"><br>
+  <button onclick="agregarDatos()">Registrar</button>
+
+  <script>
+    function agregarDatos() {
+      var nombreCompleto = document.getElementById("nombre_completo").value;
+      var edad = document.getElementById("edad").value;
+      var email = document.getElementById("email").value;
+      var nombreUsuario = document.getElementById("nombre_usuario").value;
+      avlTree.insert(nombreCompleto,edad);
+      console.log(nombreCompleto + " - " + edad + " - " + email + " - " + nombreUsuario);
+    }
+  </script>
+</body>
+</html>
