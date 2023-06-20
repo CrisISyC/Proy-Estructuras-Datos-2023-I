@@ -159,8 +159,10 @@ class AVLTree {
         + "Usuario: " + node.nom_usuario + "\n" 
         + "Nombre: " + node.nombre + "\n" 
         + "Email: " + node.email);
+        return true;       
       } else {
         console.log("No se encontró el usuario:", nom_usuario);
+        return false;
       }
     }
     searchNode(node, nom_usuario) {
