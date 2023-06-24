@@ -1,5 +1,4 @@
 
-
 class AVLNode {
    constructor(nom_usuario, nombre, email, contrasena) {
       this.nom_usuario = nom_usuario; // Con el usuario se crea el orden del AVL
@@ -13,7 +12,7 @@ class AVLNode {
 }
   
 
-class AVLTree {
+class AVLTreeUser {
     constructor() {
       this.root = null;
     }
@@ -176,6 +175,7 @@ class AVLTree {
         return this.searchNode(node.right, nom_usuario);
       }
     }
+    //Buscar el usuario y la contraseña para el login
     searchLogin(nom_usuario, contrasena) {
         const node = this.searchNode(this.root, nom_usuario);
   
@@ -191,8 +191,9 @@ class AVLTree {
           console.log("No se encontró el usuario:", nom_usuario);
           return false;
         }
-      }
-      AgregarUsuario(nom_usuario) {
+    }
+    // Antes de agregar un nuevo usuario verificar que no exista en el AVL
+    AgregarUsuario(nom_usuario) {
         const node = this.searchNode(this.root, nom_usuario);
   
         if (node !== null) {
@@ -200,7 +201,7 @@ class AVLTree {
         } else {
           return false;
         }
-      }
+    }
 
     // Método para eliminar un nodo del árbol
     deleteUsuario(nom_usuario) {
@@ -301,29 +302,31 @@ class AVLTree {
 }  
  
   // Ejemplo de uso
-  const avlTree = new AVLTree();
+  const avlTreeUser = new AVLTreeUser();
+
   function fetchUsuarios() {
       fetch("./usuarios.json")
         .then(response => response.json())
         .then(data => {
           data.forEach(usuario => {
-            avlTree.insert(usuario.nombre_usuario,usuario.nombre_completo, usuario.email, usuario.contraseña);        
+            avlTreeUser.insert(usuario.nombre_usuario,usuario.nombre_completo, usuario.email, usuario.contraseña);        
           });
       });
   }
    
   //Pruebas para ver si funciona
-  console.log("Funciona");
+  //console.log("Funciona");
   fetchUsuarios();
   
   /*
-  avlTree.printInOrderTraversal();
+  avlTreeUser.printInOrderTraversal();
 
-  avlTree.updateUsuario("maria.florez", "nuevo Nombre", "nuevo Email", "nueva Contrasena");
+  avlTreeUser.updateUsuario("maria.florez", "nuevo Nombre", "nuevo Email", "nueva Contrasena");
 
-  avlTree.searchUsuario("cristian.barrera");
+  avlTreeUser.searchUsuario("cristian.barrera");
 
-  avlTree.deleteUsuario("juliana.gongora");
+  avlTreeUser.deleteUsuario("juliana.gongora");
 
-  avlTree.searchRange("deiver.bernal", "luis.leon");
+  avlTreeUser.searchRange("deiver.bernal", "luis.leon");
   */
+
