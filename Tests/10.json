@@ -1,0 +1,92 @@
+[
+  {
+    "id": 7677834,
+    "name": "Carson",
+    "raza": "Sphynx",
+    "age": 6,
+    "gender": "male",
+    "tipo": "Gato ",
+    "ciudad": "Barranquilla"
+  },
+  {
+    "id": 6171951,
+    "name": "Wooten",
+    "raza": "Rottweiler",
+    "age": 15,
+    "gender": "male",
+    "tipo": "perro",
+    "ciudad": "Cali"
+  },
+  {
+    "id": 2482451,
+    "name": "Mavis",
+    "raza": "Bichón Frisé",
+    "age": 10,
+    "gender": "female",
+    "tipo": "perro",
+    "ciudad": "Cartagena"
+  },
+  {
+    "id": 2142680,
+    "name": "Logan",
+    "raza": "Poodle",
+    "age": 5,
+    "gender": "male",
+    "tipo": "Gato ",
+    "ciudad": "Valledupar"
+  },
+  {
+    "id": 3391835,
+    "name": "Cherie",
+    "raza": "Dalmata",
+    "age": 22,
+    "gender": "female",
+    "tipo": "Gato ",
+    "ciudad": "Tunja"
+  },
+  {
+    "id": 3383489,
+    "name": "Matilda",
+    "raza": "Doberman Pinscher",
+    "age": 23,
+    "gender": "female",
+    "tipo": "perro",
+    "ciudad": "Quibdó"
+  },
+  {
+    "id": 2355883,
+    "name": "Richard",
+    "raza": "Bulldog",
+    "age": 15,
+    "gender": "male",
+    "tipo": "Gato ",
+    "ciudad": "Yopal"
+  },
+  {
+    "id": 5245836,
+    "name": "Harris",
+    "raza": "Husky Siberiano",
+    "age": 22,
+    "gender": "male",
+    "tipo": "perro",
+    "ciudad": "Leticia"
+  },
+  {
+    "id": 1187745,
+    "name": "Virgie",
+    "raza": "Cocker Spaniel",
+    "age": 24,
+    "gender": "female",
+    "tipo": "perro",
+    "ciudad": "Neiva"
+  },
+  {
+    "id": 3584720,
+    "name": "Marian",
+    "raza": "Poodle",
+    "age": 6,
+    "gender": "female",
+    "tipo": "Gato ",
+    "ciudad": "Sincelejo"
+  }
+]
