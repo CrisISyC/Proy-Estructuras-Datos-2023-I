@@ -97,7 +97,7 @@ btnActualizar.addEventListener("click", e=>{
     avlTreeUser.printInOrderTraversalDes();
 
 
-    h2Element.textContent = '';
+    h2Element.textContent = 'Borrar';
   
 
     pnombre1.textContent = '';
