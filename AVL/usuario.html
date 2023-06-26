@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel = "stylesheet" href = "styleuser.css">
+  <title>Usuario</title>
+
+</head>
+
+<body>
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <input type="button" value="Ver datos de usuario" id="datos">
+                <input type="button" value="Borrar usuario" id="actualizar">
+                <input type="button" value="Ver todos los usuarios" id="usuarios">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2></h2>
+                <label id ="frutas2" for="frutas" class="oculto3">Selecciona un usuario:</label>
+                <select id="frutas" name="frutas" class="oculto4">
+                </select>
+                <div><p1></p1></div>
+                
+                <div><p></p></div>
+                <div>
+                    <input type="text" id="nombre_usuarioL2" placeholder="Nombre" class = "inputL2"><br>
+                </div>
+                <div><p2></p2></div>
+                <div><p3></p3></div>
+
+                <div><p4></p4></div>
+                <div><p5></p5></div>
+
+                <div>
+                    <input type="text" id="nombre_usuarioL1" placeholder="Contraseña" class = "inputL"><br>
+                </div>
+                
+                <div class="column-container">
+                    <ul id="miLista" style="width: 10%;"></ul>
+                </div>
+                <div>
+                    <button id="botonOculto" class="oculto">Borrar usuario</button>
+                </div>
+
+                <div>
+                    <button id="botonOculto2" class="oculto2">Mostrar datos</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="AVLUser.js"></script>
+    <script src="scriptuser.js" type="module"></script> 
+    
+
+</body>
+
+</html>

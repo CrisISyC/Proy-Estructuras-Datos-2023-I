@@ -1,3 +1,8 @@
+/*export function nose(){
+    const mensaje = "sirve" 
+    return mensaje; 
+}*/
+
 const btnSignIn = document.getElementById("sign-in"),
       btnSignUp = document.getElementById("sign-up"),
       formRegister = document.querySelector(".register"),
@@ -25,19 +30,37 @@ btnRegistrarse.addEventListener("click", e=>{
 
     if (avlTreeUser.AgregarUsuario(nombreUsuario)) {
         console.log("Este Usuario ya existe.");
+        alert("Este usuario ya existe.");
       } else {
         avlTreeUser.insert(nombreUsuario, nombreCompleto, email, contrasena);
         console.log("Se registró correctamente el usuario, los datos del usuario son:" + "\n"
           + "Usuario: " + nombreUsuario + "\n"
           + "Nombre: " + nombreCompleto + "\n"
           + "Email: " + email);
+
+          alert("Se registró correctamente el usuario, los datos del usuario son:" + "\n"
+          + "Usuario: " + nombreUsuario + "\n"
+          + "Nombre: " + nombreCompleto + "\n"
+          + "Email: " + email);
       }
 })
+
 
 btnIniciar.addEventListener("click", e=>{
     var nombre_usuarioL = document.getElementById("nombre_usuarioL").value;
     var contrasenaL = document.getElementById("contrasenaL").value;
 
-    avlTreeUser.searchLogin(nombre_usuarioL, contrasenaL)
-    window.location.href = "./AVL.html";
+
+    if(avlTreeUser.searchLogin(nombre_usuarioL, contrasenaL) === 0){
+        alert("Bienvenido")
+        window.location.href = "./usuario.html";
+        
+        //nombredeusuario(nombre_usuarioL);
+    }else if(avlTreeUser.searchLogin(nombre_usuarioL, contrasenaL) === 1){
+        alert("El usuario existe en el AVL pero la contraseña es incorrecta")
+    }else{
+        alert("El usuario " + nombre_usuarioL + " no existe en el AVL")
+    }
+    //window.location.href = "./usuario.html";
 })
+

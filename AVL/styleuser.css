@@ -22,24 +22,27 @@ body {
     max-width: 900px;
     transition: all 1s ease;
     margin: 10px;
+    flex-direction: column;
 }
 
 .information{
-    width: 40%;
+    width: 100%;
+    height: 30%;
     display: flex;
     align-items: center;
     text-align: center;
     background-color: #c7eef3;
     border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .info-childs{
     width: 100%;
-    padding: 0 30px;
+    padding: 0 50px;
 }
 
 .info-childs h2 {
+    margin: 20px 0;
     font-size: 2.5rem;
     color: #333;
 }
@@ -58,7 +61,6 @@ body {
     color: #333;
     cursor: pointer;
     transition: background-color .3s ease;
-    margin: 15px;
 }
 
 .info-childs input:hover{
@@ -69,27 +71,56 @@ body {
 }
 
 .form-information{
-    width: 60%;
+    width: 100%;
+    height: 70%;
     display: flex;
-    align-items: center;
+    
     justify-content: center;
     text-align: center;
     background-color: #f8f8f8;
-    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;    
 }
 
 .form-information-childs{
-    padding: 0 30px;
+    padding: 0 100px;
 }
 
 .form-information-childs h2{
     color: #333;
+    margin: 14px;
     font-size: 2rem;
 }
 
 .form-information-childs p{
     color: #555;
+    margin: 10px;
+}
+
+.form-information-childs p1{
+    color: #555;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.form-information-childs p2{
+    color: #555;
+    font-weight: bold;
+}
+
+.form-information-childs p3{
+    color: #555;
+    margin: 10px;
+}
+
+.form-information-childs p4{
+    color: #555;
+    font-weight: bold;
+}
+
+.form-information-childs p5{
+    color: #555;
+    margin: 10px;
 }
 
 .form {
@@ -139,6 +170,73 @@ body {
     position: absolute;
     transform: translateY(-150%);
 }
+
+.column-container {
+    display: flex;
+}
+
+.column-container ul {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.column-container {
+    display: flex;
+}
+
+#miLista {
+    width: 70%;
+}
+
+#miLista2 {
+    width: 30%;
+}
+
+.oculto {
+    display: none;
+    background-color: #c7eef3;
+    color: #333;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5 px rgba(0,0,0,0.1);
+  }
+
+.oculto:hover{
+    background-color: #91dfeb 
+
+}  
+
+.oculto2 {
+    display: none;
+    background-color: #c7eef3;
+    color: #333;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5 px rgba(0,0,0,0.1);
+  }
+
+.oculto2:hover{
+    background-color: #91dfeb 
+
+}  
+.inputL2{
+    display: none;
+}
+
+.inputL{
+    display: none;
+}
+.hidden{
+    display: none;
+  }
+
 
 /* RESPONSIVE FORM*/
 

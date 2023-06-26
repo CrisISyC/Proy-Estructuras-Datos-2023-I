@@ -16,7 +16,7 @@
 },
 {
   "id": 3,
-  "nombre_completo": "Cristian Camilo Barrera Rodriguez",
+  "nombre_completo": "Cristian Camilo Barrera Rodriguez             ",
   "nombre_usuario": "cristian.barrera",  
   "email": "cristian.barrera@gmail.com",
   "contraseña" : "1234"
@@ -30,7 +30,7 @@
 },
 {
   "id": 5,
-  "nombre_completo": "Luis Esteban Leon Rojas",
+  "nombre_completo": "Luis Esteban Leon Rojas                                     ",
   "nombre_usuario": "luis.leon",  
   "email": "luis.leon@gmail.com",
   "contraseña" : "1234"

@@ -111,21 +111,64 @@ class AVLTreeUser {
       return node;
     }
 
+    printInOrder() {
+      this.inOrderLista2(this.root);
+      return 
+    }
 
     printInOrderTraversal() {
-      this.inOrder(this.root);
+      this.inOrderLista(this.root);
+      return 
     }
-    inOrder(node) {
+
+    printInOrderTraversalDes() {
+
+      this.inOrderDes(this.root);
+      return 
+    }
+
+
+    inOrderLista(node) {
       if (node !== null) {
-        this.inOrder(node.left);
+        this.inOrderLista(node.left);
+
+        var lista = document.getElementById("miLista");
+
+        var li = document.createElement("li");
+
+        li.appendChild(document.createTextNode(node.nom_usuario));
+        lista.appendChild(li);
+
+        this.inOrderLista(node.right);
+      }
+    }
+
+    inOrderLista2(node) {
+      if (node !== null) {
+        this.inOrderLista2(node.left);
         console.log("Usuario: " + node.nom_usuario + "\n" 
         + "Nombre: " + node.nombre + "\n" 
         + "Email: " + node.email );
 
-        this.inOrder(node.right);
+        this.inOrderLista2(node.right);
       }
     }
-  
+
+    inOrderDes(node) {
+      if (node !== null) {
+        this.inOrderDes(node.left);
+
+        var select = document.getElementById("frutas"); // Obtener el elemento select
+
+          var opcion = document.createElement("option"); // Crear un elemento option
+          opcion.text = node.nom_usuario; // Establecer el texto de la opción
+          opcion.value = node.nom_usuario.toLowerCase(); // Establecer el valor de la opción
+          select.add(opcion); // Agregar la opción al select
+        
+
+        this.inOrderDes(node.right);
+      }
+    }
 
     updateUsuario(nom_usuario, newnombre, newemail, newcontrasena) {
       this.root = this.updateUsuarioHelper(this.root, nom_usuario, newnombre, newemail, newcontrasena);
@@ -154,16 +197,32 @@ class AVLTreeUser {
       const node = this.searchNode(this.root, nom_usuario);
 
       if (node !== null) {
-        console.log("Información del usuario:" + "\n" 
-        + "Usuario: " + node.nom_usuario + "\n" 
-        + "Nombre: " + node.nombre + "\n" 
-        + "Email: " + node.email);
-        return true;       
+        
+        var listaValores = [node.nom_usuario, node.nombre, node.email,node.contrasena];
+        return listaValores;
       } else {
         console.log("No se encontró el usuario:", nom_usuario);
         return false;
       }
     }
+
+    search_Usuario(nom_usuario) {
+      const node = this.searchNode(this.root, nom_usuario);
+
+      if (node !== null) {
+        console.log("Información del usuario:" + "\n" 
+        + "Usuario: " + node.nom_usuario + "\n" 
+        + "Nombre: " + node.nombre + "\n" 
+        + "Email: " + node.email);
+        
+        var listaValores = [node.nom_usuario, node.nombre, node.email];
+        return listaValores;
+      } else {
+        console.log("No se encontró el usuario:", nom_usuario);
+        return false;
+      }
+    }
+
     searchNode(node, nom_usuario) {
       if (node === null || node.nom_usuario === nom_usuario) {
         return node;
@@ -181,15 +240,18 @@ class AVLTreeUser {
   
         if (node !== null) {
           if (node.nom_usuario === nom_usuario && node.contrasena === contrasena) {
+            const confirmar = 0;
             console.log("Bienvenido");
-            return true;
+            return confirmar;
           }else{
-            console.log("Usuario o contraseña incorrecta");
-            return false;
+            console.log("contraseña incorrecta");
+            const confirmar1 = 1;
+            return confirmar1;
           }     
         } else {
+          const confirmar2 = 2;
           console.log("No se encontró el usuario:", nom_usuario);
-          return false;
+          return confirmar2;
         }
     }
     // Antes de agregar un nuevo usuario verificar que no exista en el AVL
@@ -319,13 +381,15 @@ class AVLTreeUser {
   fetchUsuarios();
   
   /*
-  avlTreeUser.printInOrderTraversal();
+  avlTreeUser.printInOrder();
 
   avlTreeUser.updateUsuario("maria.florez", "nuevo Nombre", "nuevo Email", "nueva Contrasena");
 
-  avlTreeUser.searchUsuario("cristian.barrera");
+  avlTreeUser.search_Usuario("cristian.barrera");
 
-  avlTreeUser.deleteUsuario("juliana.gongora");
+
+  avlTreeUser.insert("alex.gonzales","Alex Andres Gonzales", "alex.gonzales@gmail.com", "1234");
+  avlTreeUser.insert("felix.hernandez","Felix Jose Gonzales", "felix.hernandez@gmail.com", "1234");
 
   avlTreeUser.searchRange("deiver.bernal", "luis.leon");
   */
